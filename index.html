@@ -7,3 +7,199 @@
     <h1>mi primera pagina</h1>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>sitio web</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navbar --> 
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold text-success fs-3 text-uppercase" href="#" style="text-shadow: 1px 1px 2px black;">
+  🌿 Mercado Verde
+</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">reseñas</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenido principal -->
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Bienvenido</h1>
+    <p class="lead text-center">mercado verde.</p>
+
+    <div class="row mt-5">
+      <div class="col-md-4 offset-md-4">
+        <div class="card">
+         <img src="https://picsum.photos/400/200" class="card-img-top" alt="Imagen aleatoria" />
+
+          <div class="card-body">
+            <h5 class="card-title">Una tarjeta</h5>
+            <p class="card-text">Puedes usar tarjetas para mostrar contenido de forma elegante.</p>
+            <a href="#" class="btn btn-primary">Saber más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo de limpieza</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .discount-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: yellow;
+      color: black;
+      padding: 3px 8px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      border-radius: 3px;
+    }
+    .restaurant-title {
+      font-weight: bold;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: gray;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container py-4">
+  <h3 class="mb-4">Catálogo de limpieza<span class="badge bg-warning text-dark">HASTA 100% DCTO</span></h3>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <!-- Producto 1 -->
+    <div class="col">
+      <div class="card product-card position-relative">
+        <div class="discount-badge">100% DCTO</div>
+        <img src="https://via.placeholder.com/300x180.png?text=Pizza+Individual" class="card-img-top" alt="Pizza individual">
+        <div class="card-body">
+          <h5 class="card-title">Pizza Individual</h5>
+          <p class="old-price">$7640</p>
+          <p class="fw-bold text-danger">$5500</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 2 -->
+    <div class="col">
+      <div class="card product-card position-relative">
+        <div class="discount-badge">37% DCTO</div>
+        <img src="https://via.placeholder.com/300x180.png?text=Cuarteto+de+Especialidades" class="card-img-top" alt="Cuarteto">
+        <div class="card-body">
+          <h5 class="card-title">Cuarteto Especialidades</h5>
+          <p class="old-price">$68000</p>
+          <p class="fw-bold text-danger">$42990</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 3 -->
+    <div class="col">
+      <div class="card product-card position-relative">
+        <div class="discount-badge">32% DCTO</div>
+        <img src="https://via.placeholder.com/300x180.png?text=Super+Duo" class="card-img-top" alt="Super Duo">
+        <div class="card-body">
+          <h5 class="card-title">Super Dúo: 2 Pizzas Familiares</h5>
+          <p class="old-price">$33800</p>
+          <p class="fw-bold text-danger">$22990</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="my-5">
+
+  <h3 class="mb-4">producto 1</h3> <span class="badge bg-warning text-dark">HASTA 42% DCTO</span></h3>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <!-- Producto 4 -->
+    <div class="col">
+      <div class="card product-card position-relative">
+        <div class="discount-badge">42% DCTO</div>
+        <img src="https://via.placeholder.com/300x180.png?text=Trio+Fajitas" class="card-img-top" alt="Trio Fajitas">
+        <div class="card-body">
+          <h5 class="card-title">Trio Box Fajitas</h5>
+          <p class="old-price">$25690</p>
+          <p class="fw-bold text-danger">$14790</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 5 -->
+    <div class="col">
+      <div class="card product-card position-relative">
+        <div class="discount-badge">34% DCTO</div>
+        <img src="https://via.placeholder.com/300x180.png?text=Super+Full+Basket" class="card-img-top" alt="Full Basket">
+        <div class="card-body">
+          <h5 class="card-title">producto 2</h5>
+          <p class="old-price">$42490</p>
+          <p class="fw-bold text-danger">$27990</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 6 -->
+    <div class="col">
+      <div class="card product-card position-relative">
+        <div class="discount-badge">24% DCTO</div>
+        <img src="https://via.placeholder.com/300x180.png?text=Fillet+Bowl" class="card-img-top" alt="Fillet Bowl">
+        <div class="card-body">
+          <h5 class="card-title">p3</h5>
+          <p class="old-price">$13390</p>
+          <p class="fw-bold text-danger">$10190</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    &copy; 2025 MiSitio. Todos los derechos reservados de autor 
+    .
+  </footer>
+</body>
+</html>
