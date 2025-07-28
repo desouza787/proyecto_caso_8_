@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mercado Verde - Cosméticos y Limpieza Ecológica</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-color: #f0f9f0;
+      color: #333;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+    }
+
+    nav {
+      background-color: #388E3C;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 15px;
+      display: block;
+    }
+
+    nav a:hover {
+      background-color: #2E7D32;
+    }
+
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1584447129440-b1fe170b0530');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .producto {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .producto:hover {
+      transform: scale(1.03);
+    }
+
+    .producto img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .producto h3 {
+      padding: 15px;
+      font-size: 1.2em;
+      color: #4CAF50;
+    }
+
+    footer {
+      background-color: #2E7D32;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+      .hero h2 {
+        font-size: 1.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mercado Verde</h1>
+    <p>Cosméticos y Productos de Limpieza Ecológicos</p>
+  </header>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#productos">Productos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section class="hero" id="inicio">
+    <h2>Bienvenido a tu tienda ecológica de confianza</h2>
+    <p>Transforma tu hogar y tu piel con productos 100% naturales</p>
+  </section>
+
+  <section class="section" id="productos">
+    <h2 style="text-align: center; margin-bottom: 30px; color: #388E3C;">Nuestros Productos</h2>
+    <div class="productos">
+      <div class="producto">
+        <img src="https://images.unsplash.com/photo-1605544193253-9437e3e0df57" alt="Jabón ecológico">
+        <h3>Jabón Natural de Lavanda</h3>
+      </div>
+      <div class="producto">
+        <img src="https://images.unsplash.com/photo-1616627564305-960ecf3c8aa2" alt="Limpiador multiuso">
+        <h3>Limpiador Multiuso Biodegradable</h3>
+      </div>
+      <div class="producto">
+        <img src="https://images.unsplash.com/photo-1611080626919-6f2bdb9d58c9" alt="Crema hidratante">
+        <h3>Crema Hidratante Orgánica</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contacto">
+    <h2 style="text-align: center; margin-bottom: 20px; color: #388E3C;">Contáctanos</h2>
+    <p style="text-align: center; max-width: 600px; margin: auto;">¿Tienes preguntas o quieres hacer un pedido? Escríbenos a <strong>contacto@mercadoverde.cl</strong> o visítanos en nuestras redes sociales.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Mercado Verde - Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>
