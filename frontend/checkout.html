@@ -3,31 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <title>Checkout - Mercado Verde</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f9f9f9;
+    }
+    .pago-opcion {
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .pago-opcion:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .pago-info {
+      display: none;
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+  </style>
 </head>
-<body class="bg-light">
+<body>
 
-  <div class="container py-5">
-    <div class="card shadow-lg p-4">
-      <h2 class="text-success text-center">🛒 Checkout Mercado Verde</h2>
-      <p class="text-center">Aquí podrás finalizar tu compra de:</p>
-      <h4 id="producto" class="text-center text-dark"></h4>
-
-      <div class="text-center mt-4">
-        <button class="btn btn-success btn-lg">Pagar con tarjeta 💳</button>
+<div class="container py-5">
+  <h2 class="text-center mb-4">Selecciona tu método de pago</h2>
+  <div class="row g-4 text-center">
+    <div class="col-md-4">
+      <div class="pago-opcion border p-3 rounded" onclick="mostrarInfo('mercadopago')">
+        <img src="https://img.icons8.com/color/96/mercado-pago.png" alt="Mercado Pago" class="img-fluid mb-2">
+        <h5>Mercado Pago</h5>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="pago-opcion border p-3 rounded" onclick="mostrarInfo('tarjeta')">
+        <img src="https://img.icons8.com/color/96/visa.png" alt="Tarjetas" class="img-fluid mb-2">
+        <h5>Tarjetas de Crédito/Débito</h5>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="pago-opcion border p-3 rounded" onclick="mostrarInfo('paypal')">
+        <img src="https://img.icons8.com/color/96/paypal.png" alt="PayPal" class="img-fluid mb-2">
+        <h5>PayPal</h5>
       </div>
     </div>
   </div>
 
-  <script>
-    // Leer el producto de la URL (ej: ?producto=detergente)
-    const params = new URLSearchParams(window.location.search);
-    const producto = params.get("producto");
+  <!-- Info de cada método -->
+  <div id="mercadopago" class="pago-info">
+    <h4>Pago con Mercado Pago</h4>
+    <p>Paga en cuotas sin tarjeta o con tu saldo de Mercado Pago.</p>
+    <button class="btn btn-success">Pagar con Mercado Pago</button>
+  </div>
 
-    // Mostrar en la página
-    document.getElementById("producto").textContent = producto 
-      ? producto.charAt(0).toUpperCase() + producto.slice(1)
-      : "Producto no especificado";
-  </script>
+  <div id="tarjeta" class="pago-info">
+    <h4>Pago con Tarjeta</h4>
+    <p>Aceptamos Visa, MasterCard, American Express, y más.</p>
+    <form>
+      <div class="mb-3">
+        <label class="form-label">Número de Tarjeta</label>
+        <input type="text" class="form-control" placeholder="XXXX-XXXX-XXXX-XXXX">
+      </div>
+      <div class="mb-3 row">
+        <div class="col">
+          <label class="form-label">Expiración</label>
+          <input type="text" class="form-control" placeholder="MM/AA">
+        </div>
+        <div class="col">
+          <label class="form-label">CVV</label>
+          <input type="password" class="form-control" placeholder="***">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Pagar con tarjeta</button>
+    </form>
+  </div>
+
+  <div id="paypal" class="pago-info">
+    <h4>Pago con PayPal</h4>
+    <p>Serás redirigido a PayPal para completar tu compra de forma segura.</p>
+    <button class="btn btn-warning">Pagar con PayPal</button>
+  </div>
+
+</div>
+
+<script>
+  function mostrarInfo(id) {
+    document.querySelectorAll('.pago-info').forEach(div => {
+      div.style.display = "none";
+    });
+    document.getElementById(id).style.display = "block";
+    window.scrollTo({ top: document.getElementById(id).offsetTop - 50, behavior: 'smooth' });
+  }
+</script>
+
 </body>
 </html>
