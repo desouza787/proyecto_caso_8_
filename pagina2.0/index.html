@@ -3,156 +3,109 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mercado Verde - Cosméticos y Limpieza Ecológica</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+  <title>Mercado Verde - Paula Herrera</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Roboto', sans-serif;
-    }
 
-    body {
-      background-color: #f0f9f0;
-      color: #333;
-    }
+.hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+
+
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background-color: #fffafc; color: #444; }
 
     header {
-      background-color: #4CAF50;
-      color: white;
-      padding: 20px;
-      text-align: center;
+      background: linear-gradient(90deg, #f48fb1, #81c784);
+      color: white; text-align: center; padding: 20px;
+      display: flex; flex-direction: column; align-items: center;
     }
+    header img { width: 80px; margin-bottom: 10px; border-radius: 50%; }
 
-    header h1 {
-      font-size: 2.5em;
-    }
-
-    nav {
-      background-color: #388E3C;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding: 15px;
-      display: block;
-    }
-
-    nav a:hover {
-      background-color: #2E7D32;
-    }
+    nav { background-color: #f06292; display: flex; justify-content: center; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; padding: 15px; transition: 0.3s; }
+    nav a:hover { background-color: #ec407a; }
 
     .hero {
-      background-image: url('https://images.unsplash.com/photo-1584447129440-b1fe170b0530');
-      background-size: cover;
-      background-position: center;
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
+      background: url('https://images.unsplash.com/photo-1584447129440-b1fe170b0530') center/cover no-repeat;
+      color: white; text-align: center; padding: 70px 20px;
     }
+    .hero h2 { font-size: 2.2em; text-shadow: 2px 2px 6px rgba(0,0,0,0.5); }
 
-    .hero h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
+    .section { padding: 50px 20px; max-width: 1100px; margin: auto; }
+
+    /* Tarjetas */
+    .card {
+      border: none; border-radius: 15px; overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      cursor: pointer;
     }
+    .card:hover { transform: scale(1.05); }
 
-    .section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+    footer { background-color: #ec407a; color: white; text-align: center; padding: 20px; }
 
-    .productos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .producto {
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      overflow: hidden;
+    /* Botón WhatsApp */
+    .whatsapp {
+      position: fixed; bottom: 20px; right: 20px;
+      background: #25d366; color: white;
+      border-radius: 50%; width: 60px; height: 60px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 30px; text-decoration: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
       transition: transform 0.3s;
     }
-
-    .producto:hover {
-      transform: scale(1.03);
-    }
-
-    .producto img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .producto h3 {
-      padding: 15px;
-      font-size: 1.2em;
-      color: #4CAF50;
-    }
-
-    footer {
-      background-color: #2E7D32;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.8em;
-      }
-      .hero h2 {
-        font-size: 1.5em;
-      }
-    }
-
-   
-
+    .whatsapp:hover { transform: scale(1.1); }
   </style>
 </head>
 <body>
   <header>
+    <!-- Logo -->
+    <img src="https://cdn-icons-png.flaticon.com/512/3100/3100194.png" alt="Logo Mercado Verde">
     <h1>Mercado Verde</h1>
-    <p>Cosméticos y Productos de Limpieza Ecológicos</p>
+    <p>Cosmética & Limpieza Ecológica por Paula Herrera</p>
   </header>
 
   <nav>
     <a href="#inicio">Inicio</a>
     <a href="#productos">Productos</a>
+    <a href="#sobremi">Sobre mí</a>
+    <a href="#valores">Valores</a>
+    <a href="#testimonios">Testimonios</a>
     <a href="#contacto">Contacto</a>
   </nav>
 
+  <!-- Hero -->
   <section class="hero" id="inicio">
-    <h2>Bienvenido a tu tienda ecológica de confianza</h2>
-    <p>Transforma tu hogar y tu piel con productos 100% naturales</p>
+    <h2>Bienvenida a un mundo más natural y femenino</h2>
+    <p>Cuidemos tu piel, tu hogar y el planeta 🌸</p>
   </section>
 
-  
-<!-- Tarjeta destacada -->
+  <!-- Tarjeta destacada -->
 <section class="section section-bg">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-6">
-        <div class="card">
-          <img src="https://media.istockphoto.com/id/1489061272/es/foto/tierra-cristalina-sobre-helechos-en-bosque-de-hierba-verde-con-luz-solar-medio-ambiente-salvar.jpg?s=612x612&w=0&k=20&c=e2fKIKR7LJvGhE3HyeZXMJkRSYSgvxCv71fRVYZ6bhU=" class="card-img-top" alt="Producto ecológico" />
-          <div class="card-body">
-            <h5 class="card-title">Nuestra recomendación</h5>
-            <p class="card-text">Elige productos sin químicos agresivos. Cuida tu salud y la del planeta.</p>
-             <a href="index.html" class="btn btn-success">Ver más</a>
-
-
+        <!-- Enlace que envuelve toda la tarjeta -->
+        <a href="tienda.html" class="text-decoration-none text-dark">
+          <div class="card shadow-lg border-0 hover-card">
+            <img src="https://media.istockphoto.com/id/1489061272/es/foto/tierra-cristalina-sobre-helechos-en-bosque-de-hierba-verde-con-luz-solar-medio-ambiente-salvar.jpg?s=612x612&w=0&k=20&c=e2fKIKR7LJvGhE3HyeZXMJkRSYSgvxCv71fRVYZ6bhU=" 
+                 class="card-img-top" alt="Producto ecológico" />
+            <div class="card-body text-center">
+              <h5 class="card-title text-success fw-bold">✨ Nuestra recomendación ✨</h5>
+              <p class="card-text">Elige productos sin químicos agresivos. Cuida tu salud y la del planeta.</p>
+              <p class="btn btn-success px-4 rounded-pill">Explorar catálogo</p>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </div>
@@ -160,51 +113,83 @@
 
 
 
-  <section class="section" id="productos">
-    <h2 style="text-align: center; margin-bottom: 30px; color: #388E3C;">Nuestros Productos</h2>
-    <div class="productos">
-      <div class="producto">
-        <img src="https://images.unsplash.com/photo-1605544193253-9437e3e0df57" alt="Jabón ecológico">
-        <h3>Jabón Natural de Lavanda</h3>
-      </div>
-      <div class="producto">
-        <img src="https://images.unsplash.com/photo-1616627564305-960ecf3c8aa2" alt="Limpiador multiuso">
-        <h3>Limpiador Multiuso Biodegradable</h3>
-      </div>
-      <div class="producto">
-        <img src="https://images.unsplash.com/photo-1611080626919-6f2bdb9d58c9" alt="Crema hidratante">
-        <h3>Crema Hidratante Orgánica</h3>
+  <!-- Sobre mí -->
+  <section class="section" id="sobremi">
+    <h2 style="text-align: center; color: #ec407a;">Sobre mí</h2>
+    <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 30px;">
+      <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" alt="Foto Paula" style="width: 250px; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <div style="max-width: 500px;">
+        <h3 style="color: #f06292;">Paula Herrera</h3>
+        <p>
+          Soy Paula, fundadora de <b>Mercado Verde</b>. Tengo 42 años, soy mamá de dos hijos y una amante de la naturaleza. 
+          Después de trabajar 15 años en el mundo corporativo, decidí seguir mi pasión por un estilo de vida más sano y ecológico.
+          Mi meta es que cada mujer se sienta bella, conectada con su esencia y con la tierra 🌿✨.
+        </p>
       </div>
     </div>
   </section>
 
-  
-<section class="section" id="sobremi">
-  <h2 style="text-align: center; margin-bottom: 30px; color: #388E3C;">Sobre mí</h2>
-  <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 30px;">
-    <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" alt="Foto de Paula Herrera" style="width: 250px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-    <div style="max-width: 500px;">
-      <h3 style="color: #4CAF50; margin-bottom: 10px;">Paula Herrera</h3>
-      <p style="font-size: 1.1em; line-height: 1.6;">
-        ¡Hola! Soy Paula Herrera, tengo 42 años y soy la fundadora y dueña de Mercado Verde.
-        Creo firmemente en un estilo de vida saludable y ecológico, y por eso creé este espacio 
-        donde ofrezco productos que cuidan tanto de tu cuerpo como del medio ambiente. 
-        Gracias por apoyar este proyecto lleno de amor y compromiso natural 🌱.
-      </p>
+  <!-- Valores -->
+  <section class="section" id="valores">
+    <h2 style="text-align: center; color: #ec407a; margin-bottom: 30px;">Nuestros Valores</h2>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <img src="https://cdn-icons-png.flaticon.com/512/728/728093.png" width="70">
+        <h4>100% Natural</h4>
+        <p>Ingredientes que respetan tu piel y la naturaleza.</p>
+      </div>
+      <div class="col-md-4">
+        <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" width="70">
+        <h4>Sin crueldad animal</h4>
+        <p>Amamos a los animales, nunca probamos en ellos 🐰.</p>
+      </div>
+      <div class="col-md-4">
+        <img src="https://cdn-icons-png.flaticon.com/512/2909/2909763.png" width="70">
+        <h4>Sostenible</h4>
+        <p>Packaging reciclable y procesos eco-amigables ♻️.</p>
+      </div>
     </div>
-  </div>
-</section>
-
-
-
-<section class="section" id="contacto">
-    <h2 style="text-align: center; margin-bottom: 20px; color: #388E3C;">Contáctanos</h2>
-    <p style="text-align: center; max-width: 600px; margin: auto;">¿Tienes preguntas o quieres hacer un pedido? Escríbenos a <strong>contacto@mercadoverde.cl</strong> o visítanos en nuestras redes sociales.</p>
   </section>
 
+  <!-- Testimonios -->
+  <section class="section bg-light" id="testimonios">
+    <h2 style="text-align: center; color: #ec407a; margin-bottom: 30px;">reseñas</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <blockquote>
+          <p>"Los jabones de Paula son increíbles, mi piel nunca estuvo tan suave 💕".</p>
+          <footer>- Camila R.</footer>
+        </blockquote>
+      </div>
+      <div class="col-md-4">
+        <blockquote>
+          <p>"Gracias a Mercado Verde, mi casa huele fresco sin químicos agresivos."</p>
+          <footer>- Daniela P.</footer>
+        </blockquote>
+      </div>
+      <div class="col-md-4">
+        <blockquote>
+          <p>"Me encanta que sean productos conscientes con el planeta 🌍."</p>
+          <footer>- Valentina G.</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section class="section" id="contacto">
+    <h2 style="text-align: center; color: #ec407a;">Contáctame</h2>
+    <p style="text-align: center;">📧 <b>contacto@mercadoverde.cl</b></p>
+    <p style="text-align: center;">📍 Santiago, Chile</p>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Mercado Verde - Todos los derechos reservados</p>
+    <p>&copy; 2025 Mercado Verde - Diseñado con amor por Paula 💖</p>
   </footer>
+
+  <!-- Botón WhatsApp -->
+  <a href="https://wa.me/56912345678" target="_blank" class="whatsapp">💬</a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
