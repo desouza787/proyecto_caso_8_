@@ -7,58 +7,21 @@
   <meta name="description" content="Mercado Verde ofrece productos de limpieza ecológicos, sostenibles y con grandes descuentos. Cuida tu hogar y el planeta.">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    .product-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    .product-card:hover {
-      transform: scale(1.02);
-      transition: transform 0.3s ease-in-out;
-    }
-
-    .discount-badge {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      background-color: yellow;
-      color: black;
-      padding: 3px 8px;
-      font-size: 0.8rem;
-      font-weight: bold;
-      border-radius: 3px;
-    }
-
-    .old-price {
-      text-decoration: line-through;
-      color: gray;
-      font-size: 0.9rem;
-    }
-
-    .section {
-      padding: 60px 0;
-    }
-
-    .section-bg {
-      background-color: #f8f9fa;
-    }
+    body { font-family: 'Segoe UI', sans-serif; }
+    .product-card img { width: 100%; height: 180px; object-fit: cover; }
+    .product-card:hover { transform: scale(1.02); transition: transform 0.3s ease-in-out; }
+    .discount-badge { position: absolute; top: 10px; left: 10px; background-color: yellow; color: black; padding: 3px 8px; font-size: 0.8rem; font-weight: bold; border-radius: 3px; }
+    .old-price { text-decoration: line-through; color: gray; font-size: 0.9rem; }
+    .section { padding: 60px 0; }
+    .section-bg { background-color: #f8f9fa; }
   </style>
 </head>
 <body>
 
-
-
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand fw-bold text-success fs-3 text-uppercase" href="#" style="text-shadow: 1px 1px 2px black;">
-        🌿 Mercado Verde
-      </a>
+      <a class="navbar-brand fw-bold text-success fs-3 text-uppercase" href="#" style="text-shadow: 1px 1px 2px black;">🌿 Mercado Verde</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -72,76 +35,64 @@
     </div>
   </nav>
 
-
-
-<!-- Sección de Bienvenida mejorada -->
-<section class="section text-center text-white" style="
-  background: linear-gradient(rgba(34, 139, 34, 0.8), rgba(0, 100, 0, 0.8)),
-              url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1350&q=80') no-repeat center center;
-  background-size: cover;
-  padding: 80px 20px;
+  <!-- Sección de Bienvenida -->
+  <section class="section text-center text-white" style="
+    background: linear-gradient(rgba(34, 139, 34, 0.8), rgba(0, 100, 0, 0.8)),
+                url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+    background-size: cover;
+    padding: 80px 20px;
   ">
-  <div class="container">
-    <h1 class="mb-4 display-4 fw-bold" style="text-shadow: 2px 2px 6px rgba(0,0,0,0.7);">
-      Bienvenido a Mercado Verde
-    </h1>
-    <p class="lead fs-4" style="text-shadow: 1px 1px 4px rgba(0,0,0,0.6);">
-      Productos de limpieza ecológicos y sostenibles para un hogar saludable.
-    </p>
-  </div>
-</section>
+    <div class="container">
+      <h1 class="mb-4 display-4 fw-bold" style="text-shadow: 2px 2px 6px rgba(0,0,0,0.7);">Bienvenido a Mercado Verde</h1>
+      <p class="lead fs-4" style="text-shadow: 1px 1px 4px rgba(0,0,0,0.6);">Productos de limpieza ecológicos y sostenibles para un hogar saludable.</p>
+    </div>
+  </section>
 
-<!-- Carrusel más grande horizontalmente y con más altura -->
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" style="width: 50vw; max-width: 1000px; min-width: 500px; height: 50vh; max-height: 500px; margin: 40px auto; border-radius: 10px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.3);">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner" style="height: 100%;">
-    <div class="carousel-item active" style="height: 100%;">
-      <img src="https://www.bmicos.com/wp-content/uploads/2020/10/tips-3-1.jpg" class="d-block w-100 h-100" alt="Primera diapositiva" style="object-fit: cover;">
-      <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
-        <h5>Primera diapositiva</h5>
-        <p>Contenido representativo para la primera diapositiva.</p>
+  <!-- Carrusel -->
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" style="width: 50vw; max-width: 1000px; min-width: 500px; height: 50vh; max-height: 500px; margin: 40px auto; border-radius: 10px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.3);">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner" style="height: 100%;">
+      <div class="carousel-item active" style="height: 100%;">
+        <img src="https://www.bmicos.com/wp-content/uploads/2020/10/tips-3-1.jpg" class="d-block w-100 h-100" alt="Detergentes ecológicos" style="object-fit: cover;">
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+          <h5>Detergentes que cuidan tu hogar</h5>
+          <p>Limpieza potente, sin químicos dañinos para tu familia y el planeta.</p>
+        </div>
+      </div>
+      <div class="carousel-item" style="height: 100%;">
+        <img src="https://www.revistalimpiezas.es/wp-content/uploads/sites/4/2020/09/gettyimages-941862736-1-900x600.jpg" class="d-block w-100 h-100" alt="Limpiadores multiuso" style="object-fit: cover;">
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+          <h5>Limpiadores multiuso naturales</h5>
+          <p>Perfectos para todas las superficies de tu hogar, sin residuos químicos.</p>
+        </div>
+      </div>
+      <div class="carousel-item" style="height: 100%;">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/040/246/659/small_2x/ai-generated-mockup-of-plastic-packaging-and-bottles-with-natural-organic-cosmetics-on-the-bathroom-light-background-photo.jpg" class="d-block w-100 h-100" alt="Cosmética ecológica" style="object-fit: cover;">
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+          <h5>Cosmética ecológica</h5>
+          <p>Productos naturales que miman tu piel y respetan el medio ambiente.</p>
+        </div>
       </div>
     </div>
-    <div class="carousel-item" style="height: 100%;">
-      <img src="https://www.revistalimpiezas.es/wp-content/uploads/sites/4/2020/09/gettyimages-941862736-1-900x600.jpg" class="d-block w-100 h-100" alt="Segunda diapositiva" style="object-fit: cover;">
-      <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
-        <h5>Segunda diapositiva</h5>
-        <p>Contenido representativo para la segunda diapositiva.</p>
-      </div>
-    </div>
-    <div class="carousel-item" style="height: 100%;">
-      <img src="https://static.vecteezy.com/system/resources/thumbnails/040/246/659/small_2x/ai-generated-mockup-of-plastic-packaging-and-bottles-with-natural-organic-cosmetics-on-the-bathroom-light-background-photo.jpg" class="d-block w-100 h-100" alt="Tercera diapositiva" style="object-fit: cover;">
-      <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
-        <h5>Tercera diapositiva</h5>
-        <p>Contenido representativo para la tercera diapositiva.</p>
-      </div>
-    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev" style="width: 5%;">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next" style="width: 5%;">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev" style="width: 5%;">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Anterior</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next" style="width: 5%;">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Siguiente</span>
-  </button>
-</div>
-
-</div>
-
-  
-
 
   <!-- Catálogo -->
   <section class="section">
     <div class="container">
       <h3 class="mb-4">Catálogo de limpieza ecológica <span class="badge bg-warning text-dark">Hasta 50% DCTO</span></h3>
       <div class="row row-cols-1 row-cols-md-3 g-4">
-
         <!-- Producto 1 -->
         <div class="col">
           <div class="card product-card position-relative">
@@ -151,7 +102,7 @@
               <h5 class="card-title">Detergente Ecológico</h5>
               <p class="old-price">$9.990</p>
               <p class="fw-bold text-danger">$4.990</p>
-              <a href="checkout.html?producto=detergente" target="_blank" class="btn btn-outline-success mt-2">Comprar ahora</a>
+              <a href="checkout.html?producto=detergente" class="btn btn-outline-success mt-2">Comprar ahora</a>
             </div>
           </div>
         </div>
@@ -165,7 +116,7 @@
               <h5 class="card-title">Limpiador Multiusos Natural</h5>
               <p class="old-price">$6.500</p>
               <p class="fw-bold text-danger">$4.550</p>
-              <a href="checkout.html?producto=detergente" target="_blank" class="btn btn-outline-success mt-2">Comprar ahora</a>
+              <a href="checkout.html?producto=limpiador" class="btn btn-outline-success mt-2">Comprar ahora</a>
             </div>
           </div>
         </div>
@@ -179,21 +130,21 @@
               <h5 class="card-title">Desinfectante Orgánico</h5>
               <p class="old-price">$7.990</p>
               <p class="fw-bold text-danger">$6.390</p>
-              <a href="checkout.html?producto=detergente" target="_blank" class="btn btn-outline-success mt-2">Comprar ahora</a>
+              <a href="checkout.html?producto=desinfectante" class="btn btn-outline-success mt-2">Comprar ahora</a>
             </div>
           </div>
         </div>
-   
-  <!-- Producto 4 -->
+
+        <!-- Producto 4 -->
         <div class="col">
           <div class="card product-card position-relative">
             <div class="discount-badge">50% DCTO</div>
-            <img src="https://www.essenciales.com/blog/wp-content/uploads/Crema-base-neutra-bio-Essenciales-Mindfulness-Cosmetics.jpg" class="card-img-top" alt="Detergente ecológico">
+            <img src="https://www.essenciales.com/blog/wp-content/uploads/Crema-base-neutra-bio-Essenciales-Mindfulness-Cosmetics.jpg" class="card-img-top" alt="Crema natural">
             <div class="card-body">
-              <h5 class="card-title">crema natural</h5>
+              <h5 class="card-title">Crema Natural</h5>
               <p class="old-price">$2.990</p>
               <p class="fw-bold text-danger">$1.990</p>
-              <a href="checkout.html?producto=detergente" target="_blank" class="btn btn-outline-success mt-2">Comprar ahora</a>
+              <a href="checkout.html?producto=crema" class="btn btn-outline-success mt-2">Comprar ahora</a>
             </div>
           </div>
         </div>
@@ -202,12 +153,12 @@
         <div class="col">
           <div class="card product-card position-relative">
             <div class="discount-badge">15% DCTO</div>
-            <img src="https://spacionatural.cl/cdn/shop/files/Aceite_de_Coco_100ml_Spacio_Natural.jpg?v=1728783469" class="card-img-top" alt="Limpiador multiusos natural">
+            <img src="https://spacionatural.cl/cdn/shop/files/Aceite_de_Coco_100ml_Spacio_Natural.jpg?v=1728783469" class="card-img-top" alt="Aceite natural">
             <div class="card-body">
-              <h5 class="card-title">aceite natural</h5>
+              <h5 class="card-title">Aceite Natural</h5>
               <p class="old-price">$4.500</p>
               <p class="fw-bold text-danger">$2.550</p>
-              <a href="checkout.html?producto=detergente" target="_blank" class="btn btn-outline-success mt-2">Comprar ahora</a>
+              <a href="checkout.html?producto=aceite" class="btn btn-outline-success mt-2">Comprar ahora</a>
             </div>
           </div>
         </div>
@@ -216,12 +167,12 @@
         <div class="col">
           <div class="card product-card position-relative">
             <div class="discount-badge">20% DCTO</div>
-            <img src="https://mi-salud-integral.com/wp-content/uploads/2024/11/perfumes-naturales-sin-quimicos.jpg" class="card-img-top" alt="Desinfectante orgánico">
+            <img src="https://mi-salud-integral.com/wp-content/uploads/2024/11/perfumes-naturales-sin-quimicos.jpg" class="card-img-top" alt="Perfume natural">
             <div class="card-body">
-              <h5 class="card-title">perfume natural</h5>
+              <h5 class="card-title">Perfume Natural</h5>
               <p class="old-price">$7.990</p>
               <p class="fw-bold text-danger">$6.390</p>
-              <a href="checkout.html?producto=detergente" target="_blank" class="btn btn-outline-success mt-2">Comprar ahora</a>
+              <a href="checkout.html?producto=perfume" class="btn btn-outline-success mt-2">Comprar ahora</a>
             </div>
           </div>
         </div>
@@ -230,156 +181,107 @@
     </div>
   </section>
 
+  <!-- Sección de Ofertas Especiales -->
+  <section class="py-5" id="ofertas" style="background-color: #ffffff;">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-success">🌱 Ofertas Especiales</h2>
+        <p class="text-muted">Descubre nuestras promociones en productos de limpieza ecológica todos los días</p>
+      </div>
+      <div class="row g-4">
 
+        <!-- Oferta 1 -->
+        <div class="col-md-4">
+          <div class="card shadow-sm border-0 rounded-4 h-100">
+            <img src="https://www.grupoegle.cl/wp-content/uploads//2016/09/Detergene-Ecologico-nuevo-e1640723705561.jpg" class="card-img-top rounded-top-4" alt="Detergente ecológico">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Detergente Ecológico</h5>
+              <p class="card-text text-muted">Limpieza profunda sin químicos dañinos.</p>
+              <p class="fw-bold text-success fs-4">$4.990 <span class="text-decoration-line-through text-muted fs-6">$6.990</span></p>
+              <a href="checkout.html?producto=detergente" class="btn btn-outline-success mt-2">Comprar ahora</a>
+            </div>
+          </div>
+        </div>
 
+        <!-- Oferta 2 -->
+        <div class="col-md-4">
+          <div class="card shadow-sm border-0 rounded-4 h-100">
+            <img src="https://http2.mlstatic.com/D_Q_NP_815205-MLC86466944994_062025-O.webp" class="card-img-top rounded-top-4" alt="Limpiador multiusos natural">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Limpiador Multiusos Natural</h5>
+              <p class="card-text text-muted">Ideal para cocina, baño y superficies.</p>
+              <p class="fw-bold text-success fs-4">$3.990 <span class="text-decoration-line-through text-muted fs-6">$5.490</span></p>
+              <a href="checkout.html?producto=detergente" class="btn btn-outline-success mt-2">Comprar ahora</a>
+          </div>
+        </div>
+        </div>
+
+        <!-- Oferta 3 -->
+        <div class="col-md-4">
+          <div class="card shadow-sm border-0 rounded-4 h-100">
+            <img src="https://spacionatural.cl/cdn/shop/files/Aceite_de_Jojoba_Natural_100ml.jpg?v=1728661423&width=800" class="card-img-top rounded-top-4" alt="Aceite natural">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Aceite Natural</h5>
+              <p class="card-text text-muted">Perfecto para cocinar o cuidado corporal.</p>
+              <p class="fw-bold text-success fs-4">$2.550 <span class="text-decoration-line-through text-muted fs-6">$4.500</span></p>
+               <a href="checkout.html?producto=detergente" class="btn btn-outline-success mt-2">Comprar ahora</a>
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>
-      
   </section>
 
-
-  <!-- Sección de Ofertas -->
-<section class="py-5" id="ofertas" style="background-color: #ffffff;">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="fw-bold text-success">🌱 Ofertas Especiales</h2>
-      <p class="text-muted">Descubre nuestras promociones en productos de limpieza ecológica todos los dias</p>
-    </div>
-
-    <div class="row g-4">
-      <!-- Producto 1 -->
-      <div class="col-md-4">
-        <div class="card shadow-sm border-0 rounded-4 h-100">
-          <img src="https://www.grupoegle.cl/wp-content/uploads//2016/09/Detergene-Ecologico-nuevo-e1640723705561.jpg" class="card-img-top rounded-top-4" alt="Detergente ecológico">
-          <div class="card-body text-center">
-            <h5 class="card-title fw-bold">Detergente Ecológico</h5>
-            <p class="card-text text-muted">Limpieza profunda sin químicos dañinos.</p>
-            <p class="fw-bold text-success fs-4">$4.990 <span class="text-decoration-line-through text-muted fs-6">$6.990</span></p>
-            <a href="checkout.html?producto=detergente" target="_blank" class="btn btn-outline-success mt-2">Comprar ahora</a>
-
-          </div>
-        </div>
+  <!-- Sección de contacto -->
+  <section class="py-5" id="contacto" style="background-color: #f8f9fa;">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-success">Contáctanos</h2>
+        <p class="text-muted">Estamos aquí para ayudarte. Completa el formulario y te responderemos pronto.</p>
       </div>
-
-      <!-- Producto 2 -->
-      <div class="col-md-4">
-        <div class="card shadow-sm border-0 rounded-4 h-100">
-          <img src="https://http2.mlstatic.com/D_Q_NP_815205-MLC86466944994_062025-O.webp" class="card-img-top rounded-top-4" alt="Limpiador multiusos natural">
-          <div class="card-body text-center">
-            <h5 class="card-title fw-bold">Limpiador Multiusos Natural</h5>
-            <p class="card-text text-muted">Ideal para cocina, baño y superficies.</p>
-            <p class="fw-bold text-success fs-4">$3.990 <span class="text-decoration-line-through text-muted fs-6">$5.490</span></p>
-            <a href="#" class="btn btn-success rounded-pill">Comprar ahora</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Producto 3 -->
-      <div class="col-md-4">
-        <div class="card shadow-sm border-0 rounded-4 h-100">
-          <img src="https://ecomercadoverde.cl/wp-content/uploads/2022/05/JABON-LIQUIDO-4900.jpeg" class="card-img-top rounded-top-4" alt="Jabón líquido natural">
-          <div class="card-body text-center">
-            <h5 class="card-title fw-bold">Jabón Líquido Natural</h5>
-            <p class="card-text text-muted">Suave con la piel y respetuoso con el medio ambiente.</p>
-            <p class="fw-bold text-success fs-4">$2.990 <span class="text-decoration-line-through text-muted fs-6">$4.290</span></p>
-            <a href="#" class="btn btn-success rounded-pill">Comprar ahora</a>
-          </div>
-        </div>
-      </div>
-
-      
-            <!-- Producto 4 -->
-      <div class="col-md-4">
-        <div class="card shadow-sm border-0 rounded-4 h-100">
-          <img src="https://images.unsplash.com/photo-1615486369964-6b5f3a3f2c28?auto=format&fit=crop&w=600&q=80" class="card-img-top rounded-top-4" alt="Detergente ecológico">
-          <div class="card-body text-center">
-            <h5 class="card-title fw-bold">cosa ecologica</h5>
-            <p class="card-text text-muted">Limpieza profunda sin químicos dañinos.</p>
-            <p class="fw-bold text-success fs-4">$4.990 <span class="text-decoration-line-through text-muted fs-6">$6.990</span></p>
-            <a href="#" class="btn btn-success rounded-pill">Comprar ahora</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Producto 5 -->
-      <div class="col-md-4">
-        <div class="card shadow-sm border-0 rounded-4 h-100">
-          <img src="https://images.unsplash.com/photo-1609947017136-7fcfbfd1e3c5?auto=format&fit=crop&w=600&q=80" class="card-img-top rounded-top-4" alt="Limpiador multiusos natural">
-          <div class="card-body text-center">
-            <h5 class="card-title fw-bold">cosa ecologica</h5>
-            <p class="card-text text-muted">Ideal para cocina, baño y superficies.</p>
-            <p class="fw-bold text-success fs-4">$3.990 <span class="text-decoration-line-through text-muted fs-6">$5.490</span></p>
-            <a href="#" class="btn btn-success rounded-pill">Comprar ahora</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Producto 6 -->
-      <div class="col-md-4">
-        <div class="card shadow-sm border-0 rounded-4 h-100">
-          <img src="https://images.unsplash.com/photo-1611955167811-0f0c79ffb69e?auto=format&fit=crop&w=600&q=80" class="card-img-top rounded-top-4" alt="Jabón líquido natural">
-          <div class="card-body text-center">
-            <h5 class="card-title fw-bold">cosa ecologica</h5>
-            <p class="card-text text-muted">Suave con la piel y respetuoso con el medio ambiente.</p>
-            <p class="fw-bold text-success fs-4">$2.990 <span class="text-decoration-line-through text-muted fs-6">$4.290</span></p>
-            <a href="#" class="btn btn-success rounded-pill">Comprar ahora</a>
-          </div>
-        </div>
-      </div>
-
-
-
-    </div>
-  </div>
-</section>
-
-
-
-<!-- Sección de contacto -->
-<section class="py-5" id="contacto" style="background-color: #f8f9fa;">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="fw-bold text-success">Contáctanos</h2>
-      <p class="text-muted">Estamos aquí para ayudarte. Completa el formulario y te responderemos pronto.</p>
-    </div>
-    
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <div class="card shadow-lg border-0 rounded-4">
-          <div class="card-body p-4">
-            <form>
-              <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre</label>
-                <div class="input-group">
-                  <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
-                  <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-lg border-0 rounded-4">
+            <div class="card-body p-4">
+              <form>
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+                    <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
+                  </div>
                 </div>
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Correo electrónico</label>
-                <div class="input-group">
-                  <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
-                  <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+                <div class="mb-3">
+                  <label for="email" class="form-label">Correo electrónico</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
+                    <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+                  </div>
                 </div>
-              </div>
-              <div class="mb-3">
-                <label for="mensaje" class="form-label">Mensaje</label>
-                <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje..."></textarea>
-              </div>
-              <div class="d-grid">
-                <button type="submit" class="btn btn-success btn-lg rounded-pill shadow-sm">
-                  <i class="bi bi-send-fill"></i> Enviar mensaje
-                </button>
-              </div>
-            </form>
+                <div class="mb-3">
+                  <label for="mensaje" class="form-label">Mensaje</label>
+                  <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje..."></textarea>
+                </div>
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-success btn-lg rounded-pill shadow-sm">
+                    <i class="bi bi-send-fill"></i> Enviar mensaje
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3 mt-5">
     &copy; 2025 Mercado Verde. Todos los derechos reservados.
   </footer>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
